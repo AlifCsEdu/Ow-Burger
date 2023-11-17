@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="logo2.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Ow Burger</title>
+</head>
+<body align="center">
+    <div class="about" id="about">
+        <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="picPart">
+            <img src="images/burgergrill.jpg"><img src="images/burgergrill2.jpg" alt=""><img src="images/burgergrill3.jpg" alt="">
+        </div>
+        <br><br>
+        <p><span>1. Do you provide delivery service?</span><br>
+        We provide delivery services to customers that is around Ampang and Nearby our stall.
+        <br><br>
+        <span>2. Can I choose the delivery time?</span><br>
+        Indeed you can, just select from our opening time.
+        <br>
+        <li>8:30pm - 1 am</li>
+        <br><br>
+        <span>3. Do I get a tracking number for my order?</span><br>
+        Depends on the delivery services that has taken your order! Some may just call you when they almost arrived.
+        <br><br><br>
+        </p>
+    </div>
+<div class="back" id="back">
+    <img class="logo" src="logo.png" id="logo">
+    <h1>WELCOME To <br><span>Ow Burger</span></h1>
+    <br><br><br>
+    <button id="next">NEXT</button>
+</div>
+<button class="login" id="login">Log In</button>
+<p id="name"></p>
+    <div class="top" id="top">
+        <div class="navbar">
+            <li><a class="link1" href="#">HOME</a></li><p>|</p>
+            <li><a class="link2" href="#menu">MENU</a></li><p>|</p>
+            <li><a class="link3" id="aboutPage" href="#about">ABOUT US</a></li><p>|</p>
+            <li><a class="link4" href="#footer">CONTACT US</a></li>
+        </div>
+    </div>
+
+<div class="back1" id="back1">
+    <div class="cartPart" id="menu">
+        <h2><u>M</u> <u>E</u> <u>N</u> <u>U</u></h2>
+        <button class="list" onclick="window.location.href = '#listOrder';">List</button>
+        <div class="menu">
+            <div class="productsPart">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="listOrder" id="listOrder">
+    <h2><B>C</B> <b>A</b> <b>R</b> <b>T</b></h2>
+    <button class="confirm" onclick="window.location.href = '#payment';">Confirm Order</button>
+    <button class="goBack" onclick="window.location.href = '#menu';">Back to MENU</button>
+    <br><br><br>
+    <div class="list">
+        <div class="top">
+            <p>Items : <p class="cart-items"></p></p>
+            <p>Total Price : <p class="cart-total"></p></p>
+        </div>
+        <div class="listPart">
+
+        </div>
+    </div>
+</div>
+    <div class="feedBack" id="feedBackPart">
+        <button class="create" id="create">CREATE MINE</button>
+        <div class="form" id="form">
+            <h2><h>MESSAGE</h></h2>
+            <br><br>
+            <label>RATE OUR SERVICES:</label>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5" title="5 stars"><i class="fas fa-star"></i> 5</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" title="4 stars"><i class="fas fa-star"></i> 4</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" title="3 stars"><i class="fas fa-star"></i> 3</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" title="2 stars"><i class="fas fa-star"></i> 2</label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" title="1 star"><i class="fas fa-star"></i> 1</label>
+            </div>
+            <button id="send" onclick="submitReview('<?php echo $username; ?>');">SEND</button>
+            <button id="cancel">CANCEL</button>
+        </div>
+        <h2>FEEDBACK</h2>
+        <div class="customerFeed" id="customerFeed"></div>
+    </div>
+
+<div class="footer" id="footer">
+    <div class="contactUs">
+        <p>
+            <span class="span1">Ow Burger</span>
+            <br>
+            <br>
+            Main Number : <span class="span2">018 975 7554</span>
+            <br>
+            <br>
+            <span class="span3">MEDIA SOCIAL</span>
+            <br>
+            <br>
+            Instagram : <a href="https://www.instagram.com/om.burger/">Click Here</a>
+            <br>
+            Facebook : <a href="https://www.facebook.com/pages/Om-Burger/184615158223751">Click Here</a>
+        </p>
+    </div>
+    <div class="tablePart">
+        <div>
+            <button class="submitBtn hidden" id="submitBtn">SUBMIT</button>
+        </div>
+    </div>
+</div>
+
+<div class="aboutUs" id="aboutUs">
+    <div class="elements">
+        <h2><b>M</b><b>A</b><b>P</b><b>S</b></h2>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.7490230557682!2d101.75594007587438!3d3.160715053079578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc373aa6e84639%3A0x1cf80771c84513be!2sOm%20Burger!5e0!3m2!1sen!2smy!4v1696789724712!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
+</div>
+
+    <div class="payment" id="payment">
+        <div class="paymentTitle">
+            <h2>Payment</h2>
+        </div>
+        <div class="paymentTable">
+            <h3>Payment Method</h3>
+            <select id="paymentMethod" onchange="toggleCardDetails()">
+                <option value="card">Card</option>
+                <option value="cash">Cash</option>
+            </select>
+            <div id="cardDetails" style="display: none;">
+                <h3>Card Details</h3>
+                <label for="cardName">Cardholder Name:</label>
+                <input type="text" name="cardName" id="cardName">
+                <label for="cardNo">Card No:</label>
+                <input type="text" name="cardNo" id="cardNo" placeholder="---- ---- ---- ----">
+            </div>
+            <h3>Delivery Method</h3>
+            <select id="delivery" onchange="deliveryMethodChange(this)">
+                <option value="collect">Collect at Stall</option>
+                <option value="delivery">Delivery</option>
+            </select>
+            <div id="collectDetails" class="payment-details-container">
+                <h3>Collection Details</h3>
+                <h2>Date:</h2>
+                <input type="date" id="collectDate">
+                <h2>Time:</h2>
+                <input type="time" id="collectTime">
+            </div>
+
+            <div id="deliveryDetails" class="payment-details-container" style="display: none;">
+                <h3>Delivery Details</h3>
+                <h2>Date:</h2>
+                <input type="date" id="deliveryDate">
+                <h2>Time:</h2>
+                <input type="time" id="deliveryTime">
+                <h2>Address:</h2>
+                <textarea id="deliveryAddress"></textarea>
+                <button onclick="editAddress()">Edit Address</button>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="termsCheckbox">
+                <label for="termsCheckbox">By Ordering from us, you agree to our <a href="terms.html">terms of service</a>.</label>
+            </div>
+            <button id="confirmBtn">Confirm</button>
+        </div>
+    </div>
+
+<div class="bottomPart1" id="bottomPart1">
+    <div class="part1">
+        <img src="logo.png">
+        <p class="para1">
+            <a href="#logo">HOME</a>
+            |
+            <a href="#footer">ABOUT US</a>
+            |
+            <a href="#footer">CONTACT US</a>
+        </p>
+        <p class="para2">Copyright &copy; 2023 <span><a href="https://www.facebook.com/profile.php?id=100070003956258">Ow Burger</a> </span> All rights reserved</p>
+    </div>
+    <button class="admin-button" onclick="window.location.href = 'admin.php'">Admin Panel</button>
+</div>
+
+<script src="app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+
+<!-- include firebase database -->
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+    document.getElementById('backPage').addEventListener('click', backPage);
+    function backPage(){
+        document.getElementById('top').style.display = "block";
+        document.getElementById('menu').style.display = "block";
+        document.getElementById('listOrder').style.display = "block";
+        document.getElementById('feedBackPart').style.display = "block";
+        document.getElementById('footer').style.display = "flex";
+        document.getElementById('aboutUs').style.display = "block";
+        document.getElementById('payment').style.display = "block";
+        document.getElementById('bottomPart1').style.display = "block";
+        document.getElementById('back').style.display = "none";
+        document.getElementById('name').style.display = "block";
+        document.getElementById('login').style.display = "block";
+        document.getElementById('about').style.display = "none";
+        document.getElementById('vid').style.display = "block";
+    }
+
+    document.getElementById('aboutPage').addEventListener('click', about);
+    function about(){
+        document.getElementById('top').style.display = "none";
+        document.getElementById('menu').style.display = "none";
+        document.getElementById('listOrder').style.display = "none";
+        document.getElementById('feedBackPart').style.display = "none";
+        document.getElementById('footer').style.display = "none";
+        document.getElementById('aboutUs').style.display = "none";
+        document.getElementById('payment').style.display = "none";
+        document.getElementById('name').style.display = "none";
+        document.getElementById('login').style.display = "none";
+        document.getElementById('about').style.display = "block";
+        document.getElementById('vid').style.display = "none";
+    }
+    document.getElementById('next').addEventListener('click', next);
+    function next(){
+        document.getElementById('top').style.display = "block";
+        document.getElementById('menu').style.display = "block";
+        document.getElementById('listOrder').style.display = "block";
+        document.getElementById('feedBackPart').style.display = "block";
+        document.getElementById('footer').style.display = "flex";
+        document.getElementById('aboutUs').style.display = "block";
+        document.getElementById('payment').style.display = "block";
+        document.getElementById('bottomPart1').style.display = "block";
+        document.getElementById('back').style.display = "none";
+        document.getElementById('name').style.display = "block";
+        document.getElementById('login').style.display = "block";
+        window.location.href = "#top";
+    }
+    const username = localStorage.getItem('username');
+
+    function submitReview() {
+        const rating = document.querySelector('input[name="rating"]:checked');
+
+        // Check if a rating is selected
+        if (!rating) {
+            alert('Please select a rating before submitting the review.');
+            return;
+        }
+
+        // Get the username from the welcome message
+        const welcomeMessage = document.getElementById('name').textContent;
+        const rawUsername = welcomeMessage.split('WELCOME ')[1].trim();
+
+// Remove any HTML tags from the username
+        const div = document.createElement('div');
+        div.innerHTML = rawUsername;
+        const sanitizedUsername = div.textContent || div.innerText;
+
+// Use the sanitized username
+        const username = sanitizedUsername;
+
+        // Create an XMLHttpRequest object
+        const xhr = new XMLHttpRequest();
+
+        // Configure the request
+        xhr.open('POST', 'submit_review.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        // Handle the response
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                if (response.success) {
+                    // Review submitted successfully
+                    alert('Review submitted successfully!');
+                    // You may want to reload or update the reviews on the page here
+                } else {
+                    // Review submission failed
+                    alert('Failed to submit review. Please try again.');
+                }
+            }
+        };
+
+        // Send the request with the rating and username
+        xhr.send('rating=' + rating.value + '&username=' + username);
+    }
+
+
+
+    document.getElementById('submitBtn').addEventListener('click', (e)=>{
+        e.preventDefault()
+
+        if(username == null){
+            alert ("You must login first.");
+            window.location.href = "loginPage.html";
+        }
+        else{
+            alert ("Success");
+        }
+    });
+
+    document.getElementById('login').addEventListener('click', login);
+
+    function login(){
+        window.location.href = "loginPage.html";
+    }
+
+    if(username == null){
+        document.getElementById('name').innerText = "WELCOME ====";
+    }
+    else{
+        document.getElementById('name').innerHTML = "<span style='color: purple;'>WELCOME </span>"+ username;
+        document.getElementById('login').innerText = "Log Out";
+        document.getElementById('login').addEventListener('click', logout);
+
+        function logout(){
+            localStorage.removeItem('username');
+            document.getElementById('login').innerText = "Log In";
+            alert ("Log Out Successful.");
+
+            document.getElementById('login').addEventListener('click', loginBfr);
+
+            function loginBfr(){
+                window.location.href = "loginPage.html";
+            }
+        }
+    }
+    // Toggle the display of card details based on the selected payment method
+    function toggleCardDetails() {
+        var paymentMethod = document.getElementById("paymentMethod").value;
+        var cardDetails = document.getElementById("cardDetails");
+
+        if (paymentMethod === "card") {
+            cardDetails.style.display = "block";  // Show card details
+        } else {
+            cardDetails.style.display = "none";   // Hide card details
+        }
+    }
+
+    document.getElementById('confirmBtn').addEventListener('click', function() {
+        // Check if the user is logged in
+        var username = localStorage.getItem('username');
+        if (!username) {
+            alert('Error: Please log in before placing an order.');
+            return;
+        }
+
+        var date = '';
+        var time = '';
+        var paymentMethod = document.getElementById('paymentMethod').value;
+        var itemCount = document.querySelector('.cart-items').innerText;
+        var cartTotal = document.querySelector('.cart-total').innerText;
+        var deliveryMethod = document.getElementById('delivery').value;
+        var deliveryDetailsContainer = document.getElementById('deliveryDetails');
+        var collectDetailsContainer = document.getElementById('collectDetails');
+        var deliveryAddress = '';
+
+        if (deliveryMethod === 'delivery') {
+            deliveryDetailsContainer.style.display = 'block';
+            collectDetailsContainer.style.display = 'none';
+            date = document.getElementById('deliveryDate').value;
+            time = document.getElementById('deliveryTime').value;
+            deliveryAddress = document.getElementById('deliveryAddress').value;
+        } else if (deliveryMethod === 'collect') {
+            deliveryDetailsContainer.style.display = 'none';
+            collectDetailsContainer.style.display = 'block';
+            date = document.getElementById('collectDate').value;
+            time = document.getElementById('collectTime').value;
+        } else {
+            deliveryDetailsContainer.style.display = 'none';
+            collectDetailsContainer.style.display = 'none';
+        }
+
+        var termsCheckbox = document.getElementById('termsCheckbox');
+        if (!termsCheckbox.checked) {
+            alert('Error: Please agree to the terms of service before confirming your order.');
+            return;
+        }
+
+        // Generate a unique order ID
+        var orderId = generateOrderId();
+
+        // Pass the variables to the receipt.html page using query parameters
+        var receiptURL = `receipt.html?orderId=${orderId}&username=${username}&paymentMethod=${paymentMethod}&itemCount=${itemCount}&cartTotal=${cartTotal}&deliveryMethod=${deliveryMethod}&date=${date}&time=${time}&deliveryAddress=${deliveryAddress}`;
+
+        // Open the receipt.html page in a new tab
+        window.open(receiptURL, '_blank');
+    });
+
+    function generateOrderId() {
+        // Generate a random 8-digit order ID
+        var orderId = Math.floor(Math.random() * 100000000);
+        return orderId.toString().padStart(8, '0');
+    }
+
+
+    // Function to handle the delivery method change event
+    function deliveryMethodChange(selectElement) {
+        var deliveryMethod = selectElement.value;
+        var collectDetails = document.getElementById("collectDetails");
+        var deliveryDetails = document.getElementById("deliveryDetails");
+
+        if (deliveryMethod === "collect") {
+            collectDetails.style.display = "block";
+            deliveryDetails.style.display = "none";
+        } else {
+            collectDetails.style.display = "none";
+            deliveryDetails.style.display = "block";
+        }
+    }
+
+    document.getElementById('create').addEventListener('click', form);
+
+    function form(){
+        document.getElementById('form').style.display = "block";
+    }
+
+    document.getElementById('cancel').addEventListener('click', cancel);
+
+    function cancel(){
+        document.getElementById('form').style.display = "none";
+    }
+
+    document.getElementById('send').addEventListener('click', off);
+
+    function off(){
+        document.getElementById('form').style.display = "none";
+        document.getElementById('send').disabled = true;
+    }
+    function editAddress() {
+        var deliveryAddress = document.getElementById('deliveryAddress');
+        deliveryAddress.disabled = !deliveryAddress.disabled    }
+    function AMPM(hour, min){
+        let ampm = hour >= 12 && hour < 24 ? 'p.m' : 'a.m';
+        let timeS = hour % 12;
+        timeS = timeS ? timeS : 12;
+
+        var time = timeS + ":" + min + " " + ampm;
+        return time;
+    }
+
+</script>
+</body>
+</html>

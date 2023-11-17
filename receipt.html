@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Receipt</title>
+    <link rel="stylesheet" href="receipt.css">
+</head>
+<body>
+<h1 class="receipt-header">Order Receipt</h1>
+<p class="receipt-text"><strong>Order ID:</strong> <span id="orderId"></span></p>
+<p class="receipt-text"><strong>Username:</strong> <span id="username"></span></p>
+<p class="receipt-text"><strong>Payment Method:</strong> <span id="paymentMethod"></span></p>
+<p class="receipt-text"><strong>Item Count:</strong> <span id="itemCount"></span></p>
+<p class="receipt-text"><strong>Cart Total:</strong> <span id="cartTotal"></span></p>
+<p class="receipt-text"><strong>Delivery Method:</strong> <span id="deliveryMethod"></span></p>
+<div id="deliveryDetails" class="payment-details-container">
+    <h3 class="receipt-text">Delivery Details</h3>
+    <p class="receipt-text"><strong>Date:</strong> <span id="date"></span></p>
+    <p class="receipt-text"><strong>Time:</strong> <span id="time"></span></p>
+    <p class="receipt-text"><strong>Address:</strong> <span id="deliveryAddress"></span></p>
+</div>
+
+<button class="orderAgainButton" onclick="window.location.href='index.html'">Order Again</button>
+
+<script>
+    // Get the query parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Set the values of the elements using the query parameters
+    document.getElementById('orderId').textContent = urlParams.get('orderId');
+    document.getElementById('username').textContent = urlParams.get('username');
+    document.getElementById('paymentMethod').textContent = urlParams.get('paymentMethod');
+    document.getElementById('itemCount').textContent = urlParams.get('itemCount');
+    document.getElementById('cartTotal').textContent = urlParams.get('cartTotal');
+    document.getElementById('deliveryMethod').textContent = urlParams.get('deliveryMethod');
+    document.getElementById('date').textContent = urlParams.get('date');
+    document.getElementById('time').textContent = urlParams.get('time');
+    document.getElementById('deliveryAddress').textContent = urlParams.get('deliveryAddress');
+</script>
+</body>
+</html>

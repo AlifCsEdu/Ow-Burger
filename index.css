@@ -1,0 +1,1184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 140vh;
+    background-image: url('back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    backdrop-filter: brightness(50%) blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 5px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #7a3a35;
+    border-radius: 3px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #fff200;
+    border: none;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #000;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#about{
+    display: none;
+    width: 100%;
+    height: 150vh;
+    background-color: #0007;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px 20%;
+}
+
+#about button{
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+    border-radius: 100px;
+    font-size: 30px;
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    transition: .4s;
+}
+
+#about button:hover{
+    background-color: transparent;
+    color: white;
+}
+#about .picPart{
+    width: 100%;
+    height: 300px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+#about img{
+    width: 30%;
+    height: 250px;
+    border: 2px solid white;
+}
+#about span{
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+}
+
+#logo{
+    width: 25%;
+    height: 320px;
+    padding-bottom: 20px;
+    background-color:rgba(255, 255, 255, 0.699) ;
+    border-radius: 100%;
+}
+
+#vid{
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    width: auto;
+    height: 146.5vh;
+}
+#name {
+    display: none;
+    position: absolute;
+    left: 40px;
+    top: 100px;
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: #000;
+    background: linear-gradient(to right, #fff200, #7a3a35);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+#name:hover {
+    background: linear-gradient(to right, #ffdf00, #7a3a35);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#name:focus {
+    outline: none;
+}
+
+#name:active {
+    background: linear-gradient(to right, #ffd700, #7a3a35);
+}
+
+.login {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 100px;
+    width: 7%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+    font-weight: bold;
+    background: linear-gradient(to right, rgba(72, 37, 34, 0.95), rgba(72, 37, 34, 0.7));
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    outline: none;
+}
+
+.login:hover {
+    background: linear-gradient(to right, #000, rgba(72, 37, 34, 0.7));
+    transform: scale(1.4);
+}
+
+.login:focus {
+    outline: none;
+}
+
+.login:active {
+    background: linear-gradient(to right, #000, rgba(72, 37, 34, 0.7));
+    transform: scale(0.95);
+    transition: transform 0.5s;
+}
+
+.login:not(:hover) {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(72, 37, 34, 0.5));
+    transition: transform 0.6s;
+}
+.top {
+    display: none;
+    width: 100%;
+    height: 65px;
+    background: linear-gradient(to right, #fff200, #ff8c00);
+    padding: 3px 15%;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.top .navbar {
+    width: 100%;
+    height: 40px; /* Adjusted height for better fit */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center align the navbar items vertically */
+}
+
+.top .navbar li {
+    list-style: none;
+    height: 100%;
+    padding: 0 10px; /* Adjusted padding for better spacing */
+}
+
+.top .navbar p {
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    font-size: 22px; /* Adjusted font size for better fit */
+}
+
+.top .navbar li a {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+    color: #743237;
+    border-radius: 5px; /* Added border-radius for rounded corners */
+    background-color: transparent; /* Set background color to transparent */
+    border: 2px solid #743237; /* Add border for the button-like appearance */
+}
+
+.top .navbar li a:hover {
+    transform: scale(1.05);
+    color: white;
+    background-color: #743237;
+    border-color: #743237; /* Change border color on hover */
+}
+.top .admin-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 50px;
+}
+
+.top .admin-button:hover {
+    background-color: #45a049;
+}
+
+#back{
+    display: block;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 140vh;
+    padding: 40vh 20%;
+    padding-right: 18%;
+    background-color: #0007;
+}
+
+#back h1{
+    font-size: 50px;
+    font-family: 'Helvetica Neue', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+#back h1 span{
+    font-size: 100px;
+    font-family: 'Helvetica Neue', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+#back button{
+    width: 20%;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 100px;
+    font-size: 20px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #fff200;
+    color: black;
+    transition: .4s;
+}
+
+#back button:hover{
+    background-color: #743237;
+    color: white;
+}
+
+.slider-frame {
+    overflow: hidden;
+    height: 500px;
+    width: 1180px;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 50px; /* Add a top margin */
+    border: 2px solid white;
+}
+
+@-webkit-keyframes slide_animation{
+    0% {left: 0px;}
+    10% {left: 0px;}
+    20% {left: 1180px;}
+    30% {left: 1180px;}
+    40% {left: 2360px;}
+    50% {left: 2360px;}
+    60% {left: 1180px;}
+    70% {left: 1180px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left: 0px;}
+}
+
+.slide-images{
+    width: 5000px;
+    height: 500px;
+    margin: 0 0 0 -2360px;
+    position: relative;
+    border-radius: 20px;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 9s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+.img-container{
+    height: 500px;
+    width: 1180px;
+    float: left;
+}
+
+.proPic{
+    width: 1180px;
+    height: 500px;
+}
+
+.back .bottomPart{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.back .bottomPart .pic{
+    width: 21%;
+    height: 300px;
+    border: 2px solid #743237;
+}
+#menu {
+    display: none;
+    width: 100%;
+    height: 1300px;
+    padding: 5px 20%;
+    background-color: #0002;
+}
+
+#menu .list {
+    width: 30%;
+    height: 40px;
+    border-radius: 20px; /* More rounded border */
+    border: none;
+    background-color: transparent; /* Transparent background */
+    background-image: linear-gradient(to right, #ff6b6b, #743237); /* Gradient background */
+    font-size: 20px;
+    font-family: 'Helvetica Neue', Helvetica, monospace;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    color: white;
+    transition: .4s;
+    backdrop-filter: blur(10px); /* Frosted effect */
+}
+
+#menu .list:hover {
+    background-image: linear-gradient(to right, #743237, #ff6b6b); /* Inverted gradient on hover */
+    transform: scale(1.1); /* Larger hovering */
+}
+
+#menu h2 {
+    font-size: 75px;
+    font-family: 'Helvetica Neue', Helvetica, monospace;
+    font-weight: bold;
+    color: white;
+    padding: 0 20%;
+    background-color: rgba(0, 0, 0, 0.420);
+    border-radius: 30px 30px 0 0;
+}
+
+#menu .menu {
+    width: 100%;
+    height: 700px;
+}
+
+#menu .menu .productsPart {
+    width: 100%;
+    margin: 10vh auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 5rem;
+    color: white;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+#menu .productsPart #newCart {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(47, 26, 27, 0.95);
+    padding: 20px 0;
+    border: 1px solid #230c0c;
+    transition: transform .4s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    background-image: linear-gradient(to bottom, #743237, #743237 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.1));
+    border-radius: 20px; /* Updated border-radius to make the box less square */
+}
+
+#menu .productsPart #newCart:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px black;
+}
+
+#menu .productsPart #newCart .newTable {
+    width: 100%;
+    height: 200px;
+}
+
+#menu .productsPart #newCart .newTable img {
+    width: 80%;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#menu .productsPart #newCart .newTable li {
+    padding: 10px 0;
+    list-style: none;
+}
+
+#menu .productsPart #newCart .newTable .li1 {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+#menu .productsPart #newCart .newTable .li2 {
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#menu .productsPart #newCart p {
+    padding: 19vh 0;
+}
+
+#menu .productsPart #newCart p button {
+    width: 45%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    background-image: linear-gradient(to right, #ff8a00 0%, #dd4c4f 100%); /* Adjusted gradient colors */
+    color: #000000; /* Black text */
+    transition: .4s;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#menu .productsPart #newCart p button:hover {
+    background-position: right center;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.listOrder {
+    display: none;
+    width: 100%;
+    height: 1000px;
+    padding: 50px 10%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.listOrder h2 {
+    font-size: 60px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 0 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30px 30px 0 0;
+}
+
+.listOrder button {
+    width: 20%;
+    height: 40px;
+    border-radius: 50px; /* More rounded border */
+    border: none;
+    background-color: transparent; /* Transparent background */
+    background-image: linear-gradient(to right, rgba(255, 242, 0, 0.5), rgba(255, 255, 255, 0.1)); /* Gradient background */
+    font-size: 20px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    transition: .4s;
+    color: #ffffff;
+    margin-top: 20px;
+    backdrop-filter: blur(10px); /* Frosted effect */
+}
+
+.listOrder button:hover {
+    background-color: #2f1a1b;
+    color: #ffffff;
+    transform: scale(1.1); /* Larger hovering */
+}
+.listOrder .list {
+    width: 100%;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+.listOrder .list .top {
+    width: 100%;
+    height: 70px;
+    background-color: #333;
+    padding: 10px 0;
+    padding-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 24px;
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.listOrder .list .listPart {
+    width: 100%;
+    height: 570px;
+    overflow-y: scroll;
+    padding: 20px 30px;
+}
+
+.listOrder .list .listPart .cart-item {
+    width: 100%;
+    height: 180px;
+    padding: 15px 0;
+}
+
+.listOrder .list .listPart .cart-item .part {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.listOrder .list .listPart .cart-item .part img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.listOrder .list .listPart .cart-item .part .top1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    padding: 20px 30px;
+    color: white;
+}
+
+.listOrder .list .listPart .cart-item .part .top1 h4 {
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    margin-bottom: 10px;
+}
+
+.listOrder .list .listPart .cart-item .part .top1 h5 {
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 10px;
+    color: yellow;
+}
+
+.listOrder .list .listPart .cart-item .part .top1 span {
+    width: 100px;
+    padding: 5px 20px;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    font-family: 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.listOrder .list .listPart .cart-item .part .bottom1 {
+    width: 100px;
+    padding: 10px 20px;
+    background-color: #121212; /* Change to a light gray color */
+    font-size: 18px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+body {
+    background-color: #111;
+}
+
+#feedBackPart {
+    display: none;
+}
+
+/* Common Styles */
+.create {
+    position: absolute;
+    top: 2510px;
+    left: 73%;
+    width: 170px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    background-image: linear-gradient(to right, #774936 0%, #ffdf7f 100%); /* Chocolate and yellow gradient */
+    color: #000; /* Black text */
+    transition: 0.4s;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+    font-weight: 600;
+}
+
+.create:hover {
+    background-color: #774936; /* Chocolate background color on hover */
+    color: #000; /* Black text color on hover */
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Added to horizontally center the rating */
+}
+
+.rating label {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Added to horizontally center the star */
+    margin-right: 10px;
+}
+
+#feedBackPart h2 {
+    font-size: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: white;
+    padding: 0 20%;
+    background-color: #774936; /* Chocolate background color */
+    border-radius: 30px 30px 0 0;
+    box-shadow: 20px 20px 20px black;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    position: relative;
+    z-index: 2;
+}
+
+#feedBackPart .customerFeed {
+    width: 100%;
+    height: 370px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    overflow-y: scroll;
+    padding: 30px 10%;
+    box-shadow: 20px 20px 20px black;
+}
+
+#feedBackPart .form {
+    display: none;
+    position: absolute;
+    left: 20%;
+    top: 2600px; /* Adjusted top position */
+    right: 20%;
+    background-color: #bb8d56; /* Chocolate background color */
+    border-radius: 30px;
+    overflow: hidden;
+    height: 200px;
+}
+
+#feedBackPart .form h2 {
+    font-size: 40px; /* Adjusted font size */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: white;
+    padding: 0 20%;
+    background-color: #774936; /* Chocolate background color */
+    border-radius: 30px 30px 0 0;
+}
+
+#feedBackPart .form textarea {
+    width: 70%;
+    min-height: 200px; /* Adjusted minimum height */
+    padding: 20px 50px;
+    border-radius: 20px;
+}
+
+#feedBackPart .form button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+#feedBackPart .form #cancel {
+    background-color: #c28759; /* Chocolate background color of cancel button */
+    color: white;
+}
+
+#feedBackPart .form #cancel:hover {
+    background-color: #d8a37c; /* Lighter chocolate background color on hover */
+}
+
+#feedBackPart .form #send {
+    background-color: #ffa83e; /* Yellow background color of send button */
+    color: white;
+}
+
+#feedBackPart .form #send:hover {
+    background-color: #ffbb6b; /* Lighter yellow background color on hover */
+}
+.accepted{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+#messagePart p{
+    font-size: 20px;
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+    font-weight: bold;
+    width: 60%;
+    word-break: break-all;
+    color: black;
+}
+
+#messagePart p span{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    color: black;
+}
+label{
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+input{
+    width: 40px;
+}
+
+
+
+.star{
+    width: 30%;
+    font-size: 25px;
+    color: yellow;
+    -webkit-text-stroke: 1px black;
+}
+
+/* Styles for the Payment section */
+.payment {
+    display: none;
+    width: 100%;
+    height: 1200px;
+    align-items: center;
+    padding: 1vh 20%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.paymentTitle {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(122, 58, 53, 0.596), rgba(122, 58, 53, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-align: center;
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+    font-size: 36px;
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 16px 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.paymentTable {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    background: linear-gradient(to bottom, #2c2c2c, #1e1e1e);
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.paymentTable h3 {
+    font-size: 32px;
+    color: #fff200;
+    padding: 20px 0;
+}
+
+h2.payment-details {
+    color: white;
+    font-size: 25px;
+}
+
+.paymentTable h3 span {
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+    color: white;
+    font-style: normal;
+}
+
+.paymentTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.paymentTable table tr:hover {
+    background-color: rgb(250, 240, 240);
+}
+
+.paymentTable table img {
+    width: 150px;
+}
+
+.paymentTable table th,
+.paymentTable table td {
+    padding: 10px;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Arial';
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+}
+
+.paymentTable table tr .col1 {
+    width: 10%;
+    height: 50px;
+}
+
+.paymentTable table tr .col2 {
+    width: 1%;
+}
+
+.paymentTable table tr .col3 {
+    width: 57%;
+}
+
+.paymentTable table tr .col3 #cardName {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.paymentTable table tr td #cardNo {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+#paymentMethod {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Styling for the div with id "cardDetails" */
+#cardDetails {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Styling for the "Card Details" heading inside #cardDetails */
+#cardDetails h3 {
+    font-size: 24px;
+    color: #fdd835;
+}
+
+/* Styling for the label "Cardholder Name" */
+label[for="cardName"] {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Styling for the input with id "cardName" */
+#cardName {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the label "Card No" */
+label[for="cardNo"] {
+    color: #fff;
+    font-size: 18px;
+}
+
+#collectDetails h2,
+#deliveryDetails h2 {
+    font-size: 18px;
+    color: white;
+}
+
+#deliveryDetails h2[for="deliveryAddress"] {
+    color: white;
+}
+
+#cardNo {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the select element with id "delivery" */
+#delivery {
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Styling for .payment-details-container elements */
+.payment-details-container {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Styling for the input elements inside .payment-details-container */
+.payment-details-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#payment #confirmBtn {
+    background-color: #fff200;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#payment #confirmBtn:hover {
+    background-color: #ffcc29;
+    color: #ffffff;
+}
+
+/* Styling for the textarea inside .payment-details-container */
+.payment-details-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#deliveryDetails button {
+    background-color: #fff200;
+    color: #230c0c;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#deliveryDetails button:hover {
+    background-color: #c8bc06;
+}
+
+/* Styling for the checkbox and label inside .checkbox-container */
+.checkbox-container input {
+    margin-right: 10px;
+}
+.paymentTable table tr .rc3 {
+    color: yellow;
+}
+
+.paymentTable table tr .rc3 #noPin {
+    width: 110%;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+#footer{
+    display: none;
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 25%;
+    background-color: rgba(245, 222, 179, 0.651);
+    border-style: dashed;
+    color: black;
+}
+
+#footer .contactUs {
+    width: 80%;
+    height: 300px;
+    background-color: rgba(22, 22, 22, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border: none;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-image: linear-gradient(to bottom, rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 0.6));
+}
+
+#footer .contactUs p {
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+    font-weight: 800;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+#footer .contactUs p .span1 {
+    font-size: 30px;
+    font-style: italic;
+    color: #e60027;
+}
+
+#footer .contactUs p .span2 {
+    color: yellow;
+}
+
+#footer .contactUs p .span3 {
+    color: yellow;
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+#footer .contactUs p a {
+    color: rgb(85, 85, 255);
+    text-decoration: none;
+}
+
+#footer .contactUs p a:hover {
+    text-decoration: underline;
+}
+
+.aboutUs{
+    display: none;
+    width: 100%;
+    height: 600px;
+    padding: 30px 20%;
+    background-color: rgba(245, 222, 179, 0.651);
+    border-style: dashed;
+    color: black;
+}
+
+.aboutUs .elements{
+    width: 100%;
+    height: 530px;
+    background-color: rgb(22, 22, 22);
+    padding: 10px 10%;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Amazon Ember', 'Google Sans', Arial, sans-serif;
+}
+
+.aboutUs .elements h2{
+    color: yellow;
+}
+
+.aboutUs .elements iframe{
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    box-shadow: 15px 15px 15px rgb(0, 0, 0);
+}
+
+#bottomPart1 {
+    display: none;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(122, 58, 53, 0.8);
+    padding: 20px 33%;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+}
+
+#bottomPart1 img{
+    width: 250px;
+    height: 150px;
+}
+
+#bottomPart1 .part1{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottomPart1 .part1 .para1{
+    padding: 50px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#bottomPart1 .part1 .para1 a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#bottomPart1 .part1 .para2{
+    position: absolute;
+    padding-top: 13vh;
+    left: 49.5%;
+    color: #ffffff;
+}
+
+#bottomPart1 .part1 .para2 a{
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+.submitBtn.hidden {
+    display: none;
+}

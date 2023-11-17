@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "Beef Burger",
+        "price": 5.00,
+        "image": { "fields": { "file": { "url": "images/singlebeef.webp" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "Chicken Burger",
+        "price": 5.00,
+        "image": { "fields": { "file": { "url": "images/singlechicken.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "Crispy Chicken<br>Burger",
+        "price": 4.00,
+        "image": { "fields": { "file": { "url": "images/singleayamcrispy.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "Rabbit Burger",
+        "price": 3.00,
+        "image": { "fields": { "file": { "url": "images/burgerarnab.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "Lamb Burger",
+        "price": 3.00,
+        "image": { "fields": { "file": { "url": "images/lambburger.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "Deer Burger",
+        "price": 2.00,
+        "image": { "fields": { "file": { "url": "images/burgerrusa.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "Chicken Oblong<br> Burger",
+        "price": 3.00,
+        "image": { "fields": { "file": { "url": "images/oblongayam.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "Beef Oblong<br> Burger",
+        "price": 4.00,
+        "image": { "fields": { "file": { "url": "images/oblongdaging.jpg" } } }
+      }
+    }
+  ]
+}
